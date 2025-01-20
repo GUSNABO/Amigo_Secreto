@@ -160,3 +160,10 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+.name-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #df0505;
+}
