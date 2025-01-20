@@ -19,5 +19,29 @@ function agregarAmigo() {
 //Limpiar el campo de entrada
     inputAmigo.value = "";
 
-    console.log(amigos);
+    //console.log(amigos);
+
+    mostrarAmigos();
+}
+
+// Función para mostrar los amigos en la lista HTML
+function mostrarAmigos() {
+
+//Obtener el elemento de la lista
+    const listaHTML = document.getElementById('listaAmigos');
+
+//Limpiar la lista existente
+    listaHTML.innerHTML = "";
+
+//Iterar sobre el arreglo
+    for (let i = 0; i < amigos.length; i++) {
+        // Crear un nuevo elemento <li>
+        const li = document.createElement('li');
+        li.textContent = amigos[i]; // Asignar el nombre del amigo como texto del <li>
+        li.classList.add('name-item');
+
+//Agregar elementos a la lista
+    listaHTML.appendChild(li);
+
+    }
 }
